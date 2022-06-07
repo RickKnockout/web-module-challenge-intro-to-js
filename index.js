@@ -21,7 +21,7 @@ Do the following:
 */
 
 let votingAge = 19;
-if (votingAge >= 18 ){
+if (votingAge >= 18) {
   console.log(true);
 }
 
@@ -41,7 +41,7 @@ Do the following:
 let firstThing = 1;
 let secondThing = 2;
 
-if (firstThing === secondThing ){
+if (firstThing === secondThing) {
   firstThing = 3;
   console.log(firstThing);
 }
@@ -72,13 +72,13 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(a,b){
+function multiply(a, b) {
   return (a * b);
 }
 
 let a = 2;
 let b = 3;
-let result = multiply(a,b);
+let result = multiply(a, b);
 console.log(result);
 
 
@@ -92,8 +92,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(humanAge){
-return humanAge * 7;
+function dogYears(humanAge) {
+  return humanAge * 7;
 }
 let humanAge = 15;
 let result2 = dogYears(humanAge);
@@ -144,48 +144,48 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
       
         Notice the expected and received, expected is what the test is looking for, and received is what was actually returned from this function. You can also see it's passing in two values, the number 4 and the number 1. 
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
-*/  
+*/
 
-function hungryDog(weight,age){
-  let ageMonths = age*12;
-    console.log(ageMonths);
-    
-  if (ageMonths >= 12){
-    if (weight <= 5){
+function hungryDog(weight, age) {
+  let ageMonths = age * 12;
+  console.log(ageMonths);
+
+  if (ageMonths >= 12) {
+    if (weight <= 5) {
       return .05 * weight;
     } else {
-      if(weight >=6 && weight <= 10){
+      if (weight >= 6 && weight <= 10) {
         return .04 * weight;
-      } else{
-        if(weight >=11 && weight <=15){
+      } else {
+        if (weight >= 11 && weight <= 15) {
           return .03 * weight;
         } else {
-          if(weight > 15){
+          if (weight > 15) {
             return .02 * weight;
           }
         }
       }
     }
   } else {
-    if (ageMonths >= 2 && ageMonths <= 4){
+    if (ageMonths >= 2 && ageMonths <= 4) {
       return .1 * weight;
     } else {
-      if (ageMonths > 4 && ageMonths <= 7){
+      if (ageMonths > 4 && ageMonths <= 7) {
         return .05 * weight;
       } else {
-        if (ageMonths >7 && ageMonths <= 12){
+        if (ageMonths > 7 && ageMonths <= 12) {
           return .04 * weight;
         }
       }
     }
   }
-  }
-  
-  let dogAge = .5;
-  let dogWeight = 15;
-  
-  let resultDog = hungryDog(dogWeight,dogAge);
-  console.log(resultDog);
+}
+
+let dogAge = .5;
+let dogWeight = 15;
+
+let resultDog = hungryDog(dogWeight, dogAge);
+console.log(resultDog);
 
 
 
@@ -210,9 +210,80 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+let computer = computerChoice();
+if (computer === 0) {
+  computer = "rock";
+} else {
+  if (computer === 1){
+    computer = "paper";
+  } else {
+    if (computer === 2){
+      computer = "scissors";
+    }
+  }
 }
+
+game("rock","scissors");
+
+function computerChoice(){
+  return getRandomInt(3);
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * 2);
+}
+
+function game(user, computer) {
+  console.log ("Users choice is " + user);
+  console.log("Computers choice is " + computer);
+
+  if (user === "rock") {
+    return userRock(computer);
+  } else if (user === "paper"){
+      return userPaper(computer);
+    } else {
+      return userScissors(computer);
+    }
+  }
+
+function userRock(computer) {
+  if (computer === "rock") {
+    console.log ('tie');
+    return "it's a tie";
+  } else if (computer === "paper") {
+      console.log ('loss');
+      return "you lose!";
+    } else {
+      console.log ('win')
+      return "you win!";
+    }
+  }
+
+function userPaper(computer){
+  if (computer === "rock"){
+    console.log ('win');
+    return "you win!";
+  } else if (computer === "paper"){
+      console.log ('tie');
+      return "it's a tie'";
+    } else {
+      console.log ('loss');
+      return "you lose!";
+    }
+  }
+
+function userScissors(computer){
+  if (computer === "rock"){
+    console.log ('loss');
+    return "you lose!";
+  } else if (computer === "paper"){
+      console.log('win')
+      return "you win!";
+    } else {
+      console.log('tie')
+      return "it's a tie";
+    }
+  }
 
 
 
@@ -227,7 +298,7 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(/*add your code here*/) {
   /*add your code here*/
 }
 
@@ -241,7 +312,7 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(/*add your code here*/) {
   /*add your code here*/
 }
 
@@ -261,8 +332,8 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(/*add your code here*/) {
+  /*add your code here*/
 }
 
 
@@ -281,8 +352,8 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(/*Your Code here */) {
+  /*Your Code here */
 }
 
 
@@ -307,7 +378,7 @@ function vowelCounter(/*add your code here*/) {
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
+function foo() {
   console.log('its working');
   return 'bar';
 }
