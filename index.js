@@ -214,18 +214,18 @@ let computer = computerChoice();
 if (computer === 0) {
   computer = "rock";
 } else {
-  if (computer === 1){
+  if (computer === 1) {
     computer = "paper";
   } else {
-    if (computer === 2){
+    if (computer === 2) {
       computer = "scissors";
     }
   }
 }
 
-game("rock","scissors");
+game("rock", "scissors");
 
-function computerChoice(){
+function computerChoice() {
   return getRandomInt(3);
 }
 
@@ -234,56 +234,56 @@ function getRandomInt(max) {
 }
 
 function game(user, computer) {
-  console.log ("Users choice is " + user);
+  console.log("Users choice is " + user);
   console.log("Computers choice is " + computer);
 
   if (user === "rock") {
     return userRock(computer);
-  } else if (user === "paper"){
-      return userPaper(computer);
-    } else {
-      return userScissors(computer);
-    }
+  } else if (user === "paper") {
+    return userPaper(computer);
+  } else {
+    return userScissors(computer);
   }
+}
 
 function userRock(computer) {
   if (computer === "rock") {
-    console.log ('tie');
+    console.log('tie');
     return "it's a tie";
   } else if (computer === "paper") {
-      console.log ('loss');
-      return "you lose!";
-    } else {
-      console.log ('win')
-      return "you win!";
-    }
-  }
-
-function userPaper(computer){
-  if (computer === "rock"){
-    console.log ('win');
-    return "you win!";
-  } else if (computer === "paper"){
-      console.log ('tie');
-      return "it's a tie";
-    } else {
-      console.log ('loss');
-      return "you lose!";
-    }
-  }
-
-function userScissors(computer){
-  if (computer === "rock"){
-    console.log ('loss');
+    console.log('loss');
     return "you lose!";
-  } else if (computer === "paper"){
-      console.log('win')
-      return "you win!";
-    } else {
-      console.log('tie')
-      return "it's a tie";
-    }
+  } else {
+    console.log('win')
+    return "you win!";
   }
+}
+
+function userPaper(computer) {
+  if (computer === "rock") {
+    console.log('win');
+    return "you win!";
+  } else if (computer === "paper") {
+    console.log('tie');
+    return "it's a tie";
+  } else {
+    console.log('loss');
+    return "you lose!";
+  }
+}
+
+function userScissors(computer) {
+  if (computer === "rock") {
+    console.log('loss');
+    return "you lose!";
+  } else if (computer === "paper") {
+    console.log('win')
+    return "you win!";
+  } else {
+    console.log('tie')
+    return "it's a tie";
+  }
+}
 
 
 
@@ -300,9 +300,9 @@ Using the miles function below do the following:
 
 function miles(km) {
   console.log(km);
- let resultMiles = km * 0.621371;
- console.log (resultMiles);
- return resultMiles;
+  let resultMiles = km * 0.621371;
+  console.log(resultMiles);
+  return resultMiles;
 }
 
 //Task 5b - Feet to CM
@@ -314,9 +314,9 @@ Using the feet function below do the following:
 */
 
 function feet(cm) {
- let resultFeet = cm / 30.48;
- return resultFeet;
-}  
+  let resultFeet = cm / 30.48;
+  return resultFeet;
+}
 
 
 
@@ -336,13 +336,13 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(bottles) {
   let strSong = bottles + " bottles of soda on the wall, ";
-  strSong +=  bottles + " bottles of soda, take one down pass it around ";
-  strSong +=  bottles-1 + " bottles of soda on the wall";
+  strSong += bottles + " bottles of soda, take one down pass it around ";
+  strSong += bottles - 1 + " bottles of soda on the wall";
   console.log(strSong);
   return strSong;
 }
 let numBottles = 100; // set number of bottles here
-for (let i=numBottles; i>0; i--){
+for (let i = numBottles; i > 0; i--) {
   annoyingSong(i);
 }
 
@@ -363,13 +363,13 @@ Using the grade function below do the following:
 */
 
 function grade(percentage) {
-  if (percentage >= 90 ){
+  if (percentage >= 90) {
     return 'you got an A';
-  } else if (percentage >= 80){
+  } else if (percentage >= 80) {
     return 'you got a B';
-  } else if (percentage >= 70){
+  } else if (percentage >= 70) {
     return 'you got a C';
-  } else if (percentage >= 60){
+  } else if (percentage >= 60) {
     return 'you got a D';
   } else {
     return 'you got an F';
