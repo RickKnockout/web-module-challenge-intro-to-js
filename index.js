@@ -265,7 +265,7 @@ function userPaper(computer){
     return "you win!";
   } else if (computer === "paper"){
       console.log ('tie');
-      return "it's a tie'";
+      return "it's a tie";
     } else {
       console.log ('loss');
       return "you lose!";
@@ -334,8 +334,16 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/) {
-  /*add your code here*/
+function annoyingSong(bottles) {
+  let strSong = bottles + " bottles of soda on the wall, ";
+  strSong +=  bottles + " bottles of soda, take one down pass it around ";
+  strSong +=  bottles-1 + " bottles of soda on the wall";
+  console.log(strSong);
+  return strSong;
+}
+let numBottles = 100; // set number of bottles here
+for (let i=numBottles; i>0; i--){
+  annoyingSong(i);
 }
 
 
@@ -354,9 +362,20 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */) {
-  /*Your Code here */
+function grade(percentage) {
+  if (percentage >= 90 ){
+    return 'you got an A';
+  } else if (percentage >= 80){
+    return 'you got a B';
+  } else if (percentage >= 70){
+    return 'you got a C';
+  } else if (percentage >= 60){
+    return 'you got a D';
+  } else {
+    return 'you got an F';
+  }
 }
+
 
 
 
